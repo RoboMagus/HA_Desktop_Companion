@@ -747,7 +747,7 @@ namespace HA
 
         public void minimalizeToTray(bool showNotifycation = true)
         {
-            if (showNotifycation)
+            if (showNotifycation && !configData.ContainsKey("disable_background_notification"))
             {
                 ShowNotification("App keeps Running in background!");
             }
